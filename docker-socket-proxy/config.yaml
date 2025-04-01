@@ -1,6 +1,6 @@
 name: "Docker Socket Proxy"
 version: "latest"
-slug: docker_proxy
+slug: docker-proxy
 description: "A security-enhanced proxy for the Docker Socket."
 init: false
 arch:
@@ -10,12 +10,15 @@ arch:
   - amd64
   - i386
 url: "https://github.com/Tecnativa/docker-socket-proxy"
+image: ghcr.io/tecnativa/docker-socket-proxy
 ports:
   2375/tcp: 2375
 docker_api: true
 apparmor: false
 legacy: true
 options:
+  ALLOW_START: "0"
+  ALLOW_STOP: "0"
   ALLOW_RESTARTS: "0"
   AUTH: "0"
   BUILD: "0"
@@ -44,6 +47,8 @@ options:
   VERSION: "1"
   VOLUMES: "0"
 schema:
+  ALLOW_START: "int(0,1)?"
+  ALLOW_STOP: "int(0,1)?"
   ALLOW_RESTARTS: "int(0,1)?"
   AUTH: "int(0,1)?"
   BUILD: "int(0,1)?"
@@ -71,4 +76,3 @@ schema:
   TASKS: "int(0,1)?"
   VERSION: "int(0,1)?"
   VOLUMES: "int(0,1)?"
-image: ghcr.io/tecnativa/docker-socket-proxy
