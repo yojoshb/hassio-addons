@@ -21,7 +21,7 @@ options:
   BUILD: "0"
   COMMIT: "0"
   CONFIGS: "0"
-  CONTAINERS: "0"
+  CONTAINERS: "1"
   DISTRIBUTION: "0"
   EVENTS: "1"
   EXEC: "0"
