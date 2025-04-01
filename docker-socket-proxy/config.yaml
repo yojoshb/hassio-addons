@@ -1,0 +1,74 @@
+name: "Docker Socket Proxy"
+version: "latest"
+slug: docker_proxy
+description: "A security-enhanced proxy for the Docker Socket."
+init: false
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+url: "https://github.com/Tecnativa/docker-socket-proxy"
+ports:
+  2375/tcp: 2375
+docker_api: true
+apparmor: false
+legacy: true
+options:
+  ALLOW_RESTARTS: "0"
+  AUTH: "0"
+  BUILD: "0"
+  COMMIT: "0"
+  CONFIGS: "0"
+  CONTAINERS: "0"
+  DISTRIBUTION: "0"
+  EVENTS: "1"
+  EXEC: "0"
+  GRPC: "0"
+  IMAGES: "0"
+  INFO: "0"
+  LOG_LEVEL: "info"
+  NETWORKS: "0"
+  NODES: "0"
+  PING: "1"
+  PLUGINS: "0"
+  POST: "0"
+  SECRETS: "0"
+  SERVICES: "0"
+  SESSION: "0"
+  SOCKET_PATH: "/var/run/docker.sock"
+  SWARM: "0"
+  SYSTEM: "0"
+  TASKS: "0"
+  VERSION: "1"
+  VOLUMES: "0"
+schema:
+  ALLOW_RESTARTS: "int(0,1)?"
+  AUTH: "int(0,1)?"
+  BUILD: "int(0,1)?"
+  COMMIT: "int(0,1)?"
+  CONFIGS: "int(0,1)?"
+  CONTAINERS: "int(0,1)?"
+  DISTRIBUTION: "int(0,1)?"
+  EVENTS: "int(0,1)?"
+  EXEC: "int(0,1)?"
+  GRPC: "int(0,1)?"
+  IMAGES: "int(0,1)?"
+  INFO: "int(0,1)?"
+  LOG_LEVEL: "match(info|debug|errors|fatal)?"
+  NETWORKS: "int(0,1)?"
+  NODES: "int(0,1)?"
+  PING: "int(0,1)?"
+  PLUGINS: "int(0,1)?"
+  POST: "int(0,1)?"
+  SECRETS: "int(0,1)?"
+  SERVICES: "int(0,1)?"
+  SESSION: "int(0,1)?"
+  SOCKET_PATH: "str?"
+  SWARM: "int(0,1)?"
+  SYSTEM: "int(0,1)?"
+  TASKS: "int(0,1)?"
+  VERSION: "int(0,1)?"
+  VOLUMES: "int(0,1)?"
+image: ghcr.io/tecnativa/docker-socket-proxy
