@@ -1,6 +1,6 @@
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armhf Architecture][armhf-shield] ![Supports armv7 Architecture][armv7-shield] ![Supports i386 Architecture][i386-shield]
 
-# Home Assitant Add-on: Docker Socket Proxy
+# Home Assistant Add-on: Docker Socket Proxy
 This is a security-enhanced proxy for the Docker Socket.
 
 > This add-on requires read-only access to the Docker API. It must be ran with **Protection mode** OFF
